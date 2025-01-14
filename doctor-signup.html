@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Signup</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/signup-form.css">
+    <style>/* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            background-image: url('a.jpg');
+        }
+        
+        /* Container Styling */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        h3 {
+            font-size: 24px;
+            color: #34495e;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        label {
+            font-size: 16px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        button {
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        
+        /* Attach Document Button */
+        .attach-document {
+            background-color: #f39c12;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .attach-document:hover {
+            background-color: #e67e22;
+        }
+        
+        /* Submit Button */
+        .submit-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .submit-btn .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-btn .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Terms and Conditions */
+        label[for="doctor-terms"] {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        
+        /* Link Styling */
+        p a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        p a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+        
+            h2 {
+                font-size: 30px;
+            }
+        
+            h3 {
+                font-size: 22px;
+            }
+        
+            input, button, .submit-btn .btn {
+                font-size: 14px;
+            }
+        }
+        
+        </style>
+</head>
+<body>
+    
+    <div class="container">
+            <h2>ABHIJEET HOSPITAL</h2>
+    <center>
+    <form id="doctor-form" action="#" method="POST">
+    <h3>Doctor Signup</h3>
+    <label for="doctor-fullname">Full Name:</label>
+    <input type="text" id="doctor-fullname" name="doctor-fullname" required>
+    <br>
+    <label for="doctor-specialty">Specialty:</label>
+    <input type="text" id="doctor-specialty" name="doctor-specialty" required>
+     <br>
+    <label for="doctor-contact">Contact Number:</label>
+    <input type="text" id="doctor-contact" name="doctor-contact" required>
+    <br>
+    <label for="doctor-email">Email Address:</label>
+    <input type="email" id="doctor-email" name="doctor-email" required>
+     <br>
+    <label for="doctor-username">Username:</label>
+    <input type="text" id="doctor-username" name="doctor-username" required>
+    <br>
+    <label for="doctor-password">Password:</label>
+    <input type="password" id="doctor-password" name="doctor-password" required>
+    <br>
+    <button class="attach-document">Attache Document</button>
+    <br>
+    <input type="checkbox" id="doctor-terms" name="doctor-terms" required>
+    <label for="doctor-terms">I agree to the terms and conditions.</label>
+
+    <div class="submit-btn">
+        <a href="doctor-dashboard.html" class="btn">Signup as Doctor</a>
+    </div>
+    </form>
+    <div>
+        <p style="text-align: center;">Already have an account? <a href="index.html">Login here</a>.</p>
+    </center>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Payment</title>
+    <link rel="stylesheet" href="payment.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script> <!-- Library for QR code -->
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        background-image: url('a.jpg');
+    }
+    </style>
+    </head>
+</head>
+<body>
+    <div class="payment-container">
+        <h1>Patient Payment</h1>
+        <form id="payment-form">
+            <label for="patient-name">Patient Name:</label>
+            <input type="text" id="patient-name" name="patient-name" required>
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="card">Credit/Debit Card</option>
+                <option value="upi">UPI Payment</option>
+            </select>
+
+            <!-- Card Payment Section -->
+            <div id="card-payment">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+
+            <!-- UPI Payment Section -->
+            <div id="upi-payment" style="display: none;">
+                <p>Scan the QR code below or use the UPI ID to make the payment:</p>
+                <p><strong>UPI ID:</strong> abhijeet Hospital</p>
+                <canvas id="upi-qr"></canvas>
+                
+                <label for="upi-pin">Enter UPI PIN:</label>
+                <input type="password" id="upi-pin" name="upi-pin" required placeholder="Enter UPI PIN">
+                
+                <button id="verify-upi-pin">Verify UPI PIN</button>
+                <div id="upi-verification-message"></div>
+            </div>
+
+            <button type="submit">Submit Payment</button>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

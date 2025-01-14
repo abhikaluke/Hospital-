@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Doctors</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/manage-doctors.css">
+
+
+
+
+<style>
+    body{
+        background-image: url('abhi.jpg');
+        background-size: cover;  /* Ensures the image covers the entire screen */
+    background-position: center;  /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    background-repeat: no-repeat;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid black; /* Adds border to table cells */
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2; /* Optional: Add background color to headers */
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9; /* Optional: Stripe effect */
+    }
+
+    tr:hover {
+        background-color: #f1f1f1; /* Optional: Highlight row on hover */
+    }
+</style>
+
+</style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Abhijeet Hospital</h1>
+            
+            <table><tr>
+               
+                       <th> <li><a href="hospital-dashboard.html">Home</a></li></th>
+                        <th>  <li><a href="manage-doctors.html">Manage Doctors</a></li></th>
+                            <th>  <li><a href="manage-patients.html">Manage Patients</a></li></th>
+                                <th>   <li><a href="manage-appointments.html">Manage Appointments</a></li></th>
+                                    <th>  <li><a href="settings.html">Settings</a></li></tr>
+                                        <th>  <li><a href="index.html">Logout</a></li></
+                 
+
+            </tr></table>
+        </header>
+        <main>
+            <h2>Manage Doctors</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Doctor ID</th>
+                        <th>Name</th>
+                        <th>Specialization</th>
+                        <th>Contact</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Dr. dada Rani</td>
+                        <td>Orthopedics</td>
+                        <td>dada@gmail.com</td>
+                        <td>
+                            <button class="edit-doctor">Edit</button>
+                            <button class="delete-doctor">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Dr. Sanika  Patil</td>
+                        <td>Orthopedics</td>
+                        <td>sanika@gmail.com</td>
+                        <td>
+                            <button class="edit-doctor">Edit</button>
+                            <button class="delete-doctor">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Dr.mangesh  shinde</td>
+                        <td>Pediatrics</td>
+                        <td>mangesh@gmail.com</td>
+                        <td>
+                            <button class="edit-doctor">Edit</button>
+                            <button class="delete-doctor">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Dr. Dadasho  Bandgar</td>
+                        <td>Neurology</td>
+                        <td>dada@gmail.com</td>
+                        <td>
+                            <button class="edit-doctor">Edit</button>
+                            <button class="delete-doctor">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        
+    </div>
+</body>
+</html>

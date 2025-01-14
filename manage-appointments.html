@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Appointments</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/manage-appointments.css">
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    background-image: url('b.jpg');
+    background-size: cover;  /* Ensures the image covers the entire screen */
+    background-position: center;  /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    background-repeat: no-repeat;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+/* Navigation Styles */
+header nav table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+header nav table tr {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav table th {
+    list-style: none;
+    margin: 0 10px;
+}
+
+header nav table th a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #3498db;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    text-align: center;
+}
+
+header nav table th a:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Main Content Styles */
+main h2 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Appointments Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead th {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 2px solid #2980b9;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #e8f4fc;
+}
+
+/* Action Buttons Styles */
+.edit-appointment,
+.delete-appointment {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.edit-appointment {
+    background-color: #2ecc71;
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+.edit-appointment:hover {
+    background-color: #27ae60;
+}
+
+.delete-appointment {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+.delete-appointment:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .dashboard-container {
+        padding: 15px;
+    }
+
+    header nav table {
+        flex-direction: column;
+    }
+
+    header nav table tr {
+        justify-content: center;
+    }
+
+    header nav table th {
+        margin: 5px 0;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+        background: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+    }
+
+    tbody td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #3498db;
+        text-transform: capitalize;
+        width: 120px;
+    }
+
+    /* Adjust Action Buttons in Responsive */
+    .edit-appointment,
+    .delete-appointment {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Abhijeet Hospital</h1>
+           
+                   
+                   
+                
+               
+                   
+             <table><tr>
+                         <th> <li><a href="hospital-dashboard.html">Home</a></li></th>
+                         <th> <li><a href="manage-doctors.html">Manage Doctors</a></li></th>
+                         <th> <li><a href="manage-doctors.html">Manage Doctors</a></li></th>
+                         <th> <li><a href="manage-patients.html">Manage Patients</a></li></th>
+                         <th>  <li><a href="manage-appointments.html">Manage Appointments</a></li></th>
+                         <th>  <li><a href="manage-appointments.html">Manage Appointments</a></li></th>
+                         <th>     <li><a href="#">Settings</a></li></th>
+                         <th> <li><a href="index.html">Logout</a></li></th>
+
+
+
+
+
+             </tr></table>
+        </header>
+        <main>
+            <h2> Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Appointment ID</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Doctor</th>
+                        <th>Patient</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>2024-07-01</td>
+                        <td>10:00 AM</td>
+                        <td>Dr. Mohasin</td>
+                        <td>Nitin Jadhav</td>
+                        <td>Scheduled</td>
+                        <td>
+                            <button class="edit-appointment">Edit</button>
+                            <button class="delete-appointment">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>2024-07-15</td>
+                        <td>02:00 PM</td>
+                        <td>Dr.Mukesh Rajput</td>
+                        <td>Abhijeet kaluke</td>
+                        <td>Scheduled</td>
+                        <td>
+                            <button class="edit-appointment">Edit</button>
+                            <button class="delete-appointment">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>2024-08-10</td>
+                        <td>11:00 AM</td>
+                        <td>Dr. Priyanka patil</td>
+                        <td>Raanjit jadhav</td>
+                        <td>Completed</td>
+                        <td>
+                            <button class="edit-appointment">Edit</button>
+                            <button class="delete-appointment">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>2024-09-05</td>
+                        <td>01:00 PM</td>
+                        <td>Dr. Abhishek Patil</td>
+                        <td>Abhijit  shinde</td>
+                        <td>Cancelled</td>
+                        <td>
+                            <button class="edit-appointment">Edit</button>
+                            <button class="delete-appointment">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

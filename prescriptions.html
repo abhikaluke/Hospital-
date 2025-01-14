@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Prescriptions</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/prescriptions.css">
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    background-image: url('abhi.jpg');
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    background: #3498db;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #ffffff;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #2980b9;
+}
+
+/* Main Content Styles */
+main h2 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+}
+
+thead th {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #e8f4fc;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .dashboard-container {
+        padding: 15px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+        background: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+    }
+
+    td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #3498db;
+        text-transform: capitalize;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Abhijeet Hospital</h1>
+            <nav>
+                <ul>
+                    <li><a href="patient-dashboard.html">Home</a></li>
+                    <li><a href="patient-appointments.html">Appointments</a></li>
+                    <li><a href="prescriptions.html">Prescriptions</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Prescriptions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Doctor</th>
+                        <th>Medication</th>
+                        <th>Dosage</th>
+                        <th>Instructions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-06-25</td>
+                        <td>Dr. Mohini</td>
+                        <td>Amoxicillin</td>
+                        <td>500 mg</td>
+                        <td>Take one pill every 8 hours</td>
+                    </tr>
+                    <tr>
+                        <td>2024-06-20</td>
+                        <td>Dr. Priya</td>
+                        <td>Ibuprofen</td>
+                        <td>200 mg</td>
+                        <td>Take one pill every 4-6 hours as needed for pain</td>
+                    </tr>
+                    <tr>
+                        <td>2024-06-15</td>
+                        <td>Dr. sanika</td>
+                        <td>Lisinopril</td>
+                        <td>10 mg</td>
+                        <td>Take one pill daily</td>
+                    </tr>
+                    <tr>
+                        <td>2024-06-10</td>
+                        <td>Dr. Dnyaneshwar</td>
+                        <td>Metformin</td>
+                        <td>500 mg</td>
+                        <td>Take one pill with meals</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

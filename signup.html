@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/root.css">
+    <style>/* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('a.jpg');
+            color: #333;
+        }
+        
+        /* Container Styles */
+        .btn-page-container {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+        
+        .btn-page-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #2c3e50;
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .btn a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #3498db;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn a:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .btn-page-container {
+                padding: 20px;
+            }
+        
+            .btn a {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="btn-page-container">
+        <h1>Signup as a ?</h1>
+        <div class="btn">
+            <a href="patiant-signup.html">Patiand</a>
+            <a href="doctor-signup.html">Doctor</a>
+            <a href="hospital-signup.html">Hospital</a>
+        </div>
+        
+    </div>
+</body>
+</html>

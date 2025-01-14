@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Patients</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/manage-patients.css">
+    <style>
+        body {
+            background-image: url('c.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Ensures no double borders */
+        }
+
+        th, td {
+            border: 1px solid black; /* Adds borders around cells */
+            padding: 8px;
+            text-align: left; /* Aligns text to the left */
+        }
+
+        th {
+            background-color: #f2f2f2; /* Optional: Adds a light background to header cells */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Optional: Adds stripe effect for even rows */
+        }
+
+        tr:hover {
+            background-color: #f1f1f1; /* Optional: Highlight row on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Abhijeet Hospital</h1>
+            <nav>
+                <table>
+                    <tr>
+                        <th><li><a href="hospital-dashboard.html">Home</a></li></th>
+                        <th><li><a href="manage-doctors.html">Manage Doctors</a></li></th>
+                        <th><li><a href="manage-patients.html">Manage Patients</a></li></th>
+                        <th><li><a href="manage-appointments.html">Manage Appointments</a></li></th>
+                        <th><li><a href="settings.html">Settings</a></li></th>
+                        <th><li><a href="index.html">Logout</a></li></th>
+                    </tr>
+                </table>
+            </nav>
+        </header>
+        <main>
+            <h2>Manage Patients</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Contact</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Abhijeet Kaluke</td>
+                        <td>30</td>
+                        <td>Male</td>
+                        <td>abhijit10@gmail.com</td>
+                        <td>
+                            <button class="edit-patient">Edit</button>
+                            <button class="delete-patient">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>mukesh tamboli</td>
+                        <td>25</td>
+                        <td>Male</td>
+                        <td>mukesh@gmail.com</td>
+                        <td>
+                            <button class="edit-patient">Edit</button>
+                            <button class="delete-patient">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Ranjit Jadhav</td>
+                        <td>40</td>
+                        <td>Male</td>
+                        <td>Ranjit@gmail.com</td>
+                        <td>
+                            <button class="edit-patient">Edit</button>
+                            <button class="delete-patient">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>kashinath Thatkar</td>
+                        <td>35</td>
+                        <td>Female</td>
+                        <td>kashnath@gmail.com</td>
+                        <td>
+                            <button class="edit-patient">Edit</button>
+                            <button class="delete-patient">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

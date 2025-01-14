@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Receipt</title>
+    <link rel="stylesheet" href="styles.css">
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .receipt-container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+    h1 {
+        color: #2c3e50;
+    }
+    
+    #receipt-details {
+        text-align: left;
+        margin: 20px 0;
+    }
+    
+    button {
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover {
+        background-color: #2980b9;
+    }
+    </style>
+</head>
+<body>
+    <div class="receipt-container">
+        <h1>Payment Receipt</h1>
+        <div id="receipt-details">
+            <p><strong>Patient Name:</strong> <span id="patient-name"></span></p>
+            <p><strong>Amount Paid:</strong> <span id="amount-paid"></span></p>
+            <p><strong>Payment Method:</strong> <span id="payment-method"></span></p>
+            <p><strong>Date:</strong> <span id="payment-date"></span></p>
+        </div>
+        <button onclick="window.print()">Print Receipt</button>
+    </div>
+
+    <script >
+    // Simulate receiving payment data
+const paymentData = {
+    patientName: "",
+    amountPaid: "₹",
+    paymentMethod: "",
+    paymentDate: new Date().toLocaleDateString()
+};
+
+// Populate the receipt with payment data
+document.getElementById("patient-name").textContent = paymentData.patientName;
+document.getElementById("amount-paid").textContent = paymentData.amountPaid;
+document.getElementById("payment-method").textContent = paymentData.paymentMethod;
+document.getElementById("payment-date").textContent = paymentData.paymentDate;
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Signup</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/signup-form.css">
+    <style>
+        /* General Styles */
+        body {
+            /* Add the uploaded background image */
+            background-image: url('b.jpg');
+            /* Path to the uploaded image */
+            background-size: cover;
+            /* Ensures the image covers the entire screen */
+            background-position: center;
+            /* Centers the image */
+            background-attachment: fixed;
+            /* Keeps the image fixed while scrolling */
+            background-repeat: no-repeat;
+            /* Prevents the image from repeating */
+        }
+
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px 40px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            margin: 50px auto;
+            /* Centers the container vertically */
+        }
+
+        /* Header Styles */
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input,
+        select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+
+        /* Submit Button Styles */
+        .submit-btn a {
+            display: block;
+            background: #3498db;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .submit-btn a:hover {
+            background: #2980b9;
+        }
+
+        /* Already have an account section */
+        p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        p a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        .checkbox-container {
+        
+            align-items: center;
+            /* Aligns checkbox and text vertically */
+            margin-bottom: 20px;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 20px;
+            /* Adds spacing between checkbox and label */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Abhijeet Hospital</h2>
+
+      
+            <form id="patient-form" action="/signup" method="POST">
+
+            <h3>Patient Signup</h3>
+            <label for="patient-fullname">Full Name:</label>
+            <input type="text" id="patient-fullname" name="patient-fullname" required>
+
+            <label for="patient-dob">Date of Birth:</label>
+            <input type="date" id="patient-dob" name="patient-dob" required>
+
+            <label for="patient-gender">Gender:</label>
+            <select id="patient-gender" name="patient-gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="patient-contact">Contact Number:</label>
+            <input type="text" id="patient-contact" name="patient-contact" required>
+
+            <label for="patient-email">Email Address:</label>
+            <input type="email" id="patient-email" name="patient-email" required>
+
+            <label for="patient-username">Username:</label>
+            <input type="text" id="patient-username" name="patient-username" required>
+
+            <label for="patient-password">Password:</label>
+            <input type="password" id="patient-password" name="patient-password" required>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="patient-terms" name="patient-terms" required>
+                <label for="patient-terms">I agree to the terms and conditions.</label>
+            </div>
+            
+
+            <div class="submit-btn">
+                <button type="submit">Signup as Patient</button>
+            </div>
+        </form>
+
+        <div>
+            <p style="text-align: center;">Already have an account? <a href="index.html">Login here</a>.</p>
+        </div>
+    </div>
+    <script src="js/signup.js"></script>
+</body>
+
+</html>

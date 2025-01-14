@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Signup</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/signup-form.css">
+    <style>/* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            background-image: url('b.jpg');
+            
+        }
+        
+        /* Container for the form */
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 80px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        /* Form styles */
+        form {
+            width: 100%;
+        }
+        
+        h3 {
+            font-size: 24px;
+            color: #34495e;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        label {
+            font-size: 14px;
+            color: #34495e;
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+        
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            color: #34495e;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        
+        /* Checkbox styles */
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        
+        .submit-btn {
+            margin-top: 20px;
+        }
+        
+        .submit-btn a {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #3498db;
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        
+        .submit-btn a:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer Link Styles */
+        p {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        
+        p a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        p a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+                width: 90%;
+            }
+        
+            h2 {
+                font-size: 26px;
+            }
+        
+            h3 {
+                font-size: 20px;
+            }
+        
+            label {
+                font-size: 12px;
+            }
+        
+            input[type="text"], input[type="email"], input[type="password"] {
+                font-size: 14px;
+            }
+        
+            .submit-btn a {
+                font-size: 14px;
+            }
+        }
+        </style>
+</head>
+<body>
+        <div class="container">
+            <h2>Abhijeet Hospital</h2>
+        <center>
+    <form id="hospital-form" action="#" method="POST">
+        <h3>Hospital Signup</h3>
+        <label for="hospital-name">Hospital Name:</label>
+        <input type="text" id="hospital-name" name="hospital-name" required>
+        <br>
+        <label for="hospital-contact">Contact Number:</label>
+        <input type="text" id="hospital-contact" name="hospital-contact" required>
+        <br>
+        <label for="hospital-email">Email Address:</label>
+        <input type="email" id="hospital-email" name="hospital-email" required>
+         <br>
+        <label for="hospital-username">Username:</label>
+        <input type="text" id="hospital-username" name="hospital-username" required>
+         <br>
+        <label for="hospital-password">Password:</label>
+        <input type="password" id="hospital-password" name="hospital-password" required>
+        <br>
+        <input type="checkbox" id="hospital-terms" name="hospital-terms" required>
+        <label for="hospital-terms">I agree to the terms and conditions.</label>
+
+        <div class="submit-btn">
+            <a href="hospital-dashboard.html">Signup as Hospital</a>
+        </div>
+    </form>
+    <div>
+        <p style="text-align: center;">Already have an account? <a href="index.html">Login here</a>.</p>
+    </center>
+    </div>
+    </div>
+</body>
+</html>

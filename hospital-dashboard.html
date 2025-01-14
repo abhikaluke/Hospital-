@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Control Dashboard</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/hospital.css">
+    <style>
+
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    background-image: url('a.jpg');
+}
+
+header {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    padding: 2rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.overview-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 86px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    width: 200px;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.5rem;
+    color: #4caf50;
+    margin: 0.5rem 0 0;
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    header table th, header table td {
+        font-size: 12px;
+    }
+}
+
+    </style>
+
+
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Abhijeet Hospital </h1>
+          
+            <table>
+                <tr>
+                  <th><li><a href="hospital-dashboard.html">Home</a></li></th>
+                  <th> <li><a href="manage-patients.html">Manage Patients</a></li></th>
+                  <th><li><a href="manage-appointments.html">Manage Appointments</a></li></th>
+                  <th>
+            </th>
+                  <th><li><a href="index.html">Logout</a></li></th>
+                </tr>
+                <tr>
+               
+                </tr>
+              </table>
+        </header>
+        <main>
+            <h2>Dashboard Overview</h2>
+            <div class="overview-cards">
+               <table> <td>
+                <div class="card">
+                    <h3>Total Doctors</h3>
+                    <p>25</p>
+                </div>
+            </td>
+                <div class="card">
+                    <h3>Total Patients</h3>
+                    <p>150</p>
+                </div>
+                <div class="card">
+                    <h3>Appointments Today</h3>
+                    <p>35</p>
+                </div>
+                <div class="card">
+                    <h3>Pending Reports</h3>
+                    <p>10</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+   
+    <script src="js/hospital-dashbord.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/patient.css">
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    background-image: url('abhi.jpg');
+}
+
+.dashboard-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: #3498db;
+    color: #ffffff;
+}
+
+/* Main Content Styles */
+main h2 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+thead th {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+tbody tr:hover {
+    background-color: #e8f4fc;
+}
+
+td {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .dashboard-container {
+        padding: 15px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+        background: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+    }
+
+    td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #3498db;
+        text-transform: capitalize;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Abhijeet Hospital</h1>
+            <nav>
+                <ul>
+                    <li><a href="patient-dashboard.html">Home</a></li>
+                    <li><a href="patient-appointments.html">Appointments</a></li>
+                    <li><a href="prescriptions.html">Prescriptions</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Upcoming Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Doctor</th>
+                        <th>Reason</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-07-01</td>
+                        <td>10:00 AM</td>
+                        <td>Dr.Diksh Ghodge</td>
+                        <td>General Checkup</td>
+                    </tr>
+                    <tr>
+                        <td>2024-07-15</td>
+                        <td>02:00 PM</td>
+                        <td>Dr.Sakshi more</td>
+                        <td>Follow-up</td>
+                    </tr>
+                    <tr>
+                        <td>2024-08-10</td>
+                        <td>11:00 AM</td>
+                        <td>Dr.Sonali More</td>
+                        <td>Consultation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

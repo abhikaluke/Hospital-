@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Patients</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/patients.css">
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    background-image: url('b.jpg');
+    
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    background: #3498db;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #ffffff;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #2980b9;
+}
+
+/* Main Content Styles */
+main h2 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+}
+
+thead th {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #e8f4fc;
+}
+
+.view-details {
+    padding: 5px 10px;
+    background: #2ecc71;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.view-details:hover {
+    background: #27ae60;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .dashboard-container {
+        padding: 15px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+        background: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+    }
+
+    td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #3498db;
+        text-transform: capitalize;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Abhijeet Hospital</h1>
+            <nav>
+                <ul>
+                    <li><a href="doctor-dashboard.html">Home</a></li>
+                    <li><a href="appointments.html">Appointments</a></li>
+                    <li><a href="patients.html">Patients</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Patients</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Last Visit</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Manshi Patil</td>
+                        <td>30</td>
+                        <td>Male</td>
+                        <td>2024-06-25</td>
+                        <td><button class="view-details">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Sanika Shinde</td>
+                        <td>25</td>
+                        <td>Female</td>
+                        <td>2024-06-20</td>
+                        <td><button class="view-details">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>vishal sinde</td>
+                        <td>40</td>
+                        <td>Male</td>
+                        <td>2024-06-18</td>
+                        <td><button class="view-details">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Puja Kaluke</td>
+                        <td>35</td>
+                        <td>Female</td>
+                        <td>2024-06-15</td>
+                        <td><button class="view-details">View Details</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>
